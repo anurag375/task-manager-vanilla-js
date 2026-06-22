@@ -48,7 +48,7 @@ form.addEventListener("submit", (e) => {
     const description = e.target[1].value;
     const category = e.target[2].value;
 
-    if (title.trim() === "" || category == "Select Category") {
+    if (title.trim() === "" || category == "select category") { // html value in <select>
         alert("Title and Category cannot be empty!");
         return;
     }

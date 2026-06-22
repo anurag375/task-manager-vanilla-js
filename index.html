@@ -8,14 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <!-- <main> -->
-    <button id="new-task-btn">Create task</button>
+<body data-theme="">
+    <nav>
+        <button id="new-task-btn">Create task</button>
+        <div id="theme-toggle-div">
+            <img src="moon.png" alt="" id="theme-icon">
+        </div>
+    </nav>
+
+    <!-- ============ -->
 
     <div class="form-div">
         <form>
             <div class="form-top">
-                <h2>Create new task</h2>
+                <h2 class="form-title">Create new task</h2>
                 <h2 id="form-close">X</h2>
             </div>
             <input type="text" placeholder="Enter Task">
@@ -27,30 +33,111 @@
                 <option value="personal">Personal</option>
                 <option value="shopping">Shopping</option>
             </select>
-            <button type="submit" id="add">Add</button>
+            <button type="submit" class="add">Add</button>
         </form>
     </div>
 
-    <div class="task-cards">
-        <div class="card">
-            <h2>Title</h2>
-            <div class="span-div">
-                <span id="category">category</span>
-                <span id="status" class="green">status</span>
-            </div>
-            <p>description</p>
-            <div class="btns-div">
-                <button id="complete">Complete</button>
-                <button id="update">Update</button>
-                <button id="delete">Delete</button>
-            </div>
-        </div>
-        
-    </div>
+    <!-- ============ -->
 
-    <!-- </main> -->
+    <section class="main-view">
+
+
+        <div class="task-cards">
+            <div class="card" data-id="" data-status="" data-category="">
+                <h2 class="card-title">Title</h2>
+                <div class="span-div">
+                    <span id="category" data>category</span>
+                    <span id="status" class="green">status</span>
+                </div>
+                <p>description</p>
+                <div class="btns-div">
+                    <button id="complete">Complete</button>
+                    <button id="edit">Update</button>
+                    <button id="delete">Delete</button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="right">
+
+            <div class="grandparent">grandparent
+                <div class="parent">parent
+                    <div class="child">child</div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- ============ -->
+
+    <section class="rendering-pipeline">
+
+        <div class="pipeline-heading">
+            <h2>Browser Rendering Pipeline</h2>
+            <!-- <span class="more">more ></span> -->
+
+            <!-- <p class="pipelines-theory">
+                The browser follows several steps to display a webpage.
+                It first reads the HTML and creates a DOM Tree. Then it reads the CSS and creates a CSSOM Tree. These
+                two trees are combined to form a Render Tree, which helps the browser decide how the page should look.
+                Finally, the browser displays the webpage on the screen.
+            </p> -->
+        </div>
+
+        <div class="pipeline1">
+
+            <div class="box">HTML</div>
+            <div class="arrow">→</div>
+
+            <div class="box">Parsing</div>
+            <div class="arrow">→</div>
+
+            <div class="box">Tokenization</div>
+            <div class="arrow">→</div>
+
+            <div class="box">DOM Tree</div>
+
+        </div>
+
+        <div class="pipeline2">
+
+            <div class="box">CSS</div>
+            <div class="arrow">→</div>
+
+            <div class="box">Parsing</div>
+            <div class="arrow">→</div>
+
+            <div class="box">CSSOM Tree</div>
+
+        </div>
+
+        <div class="merge">
+
+            <div class="box">DOM Tree</div>
+            <div class="plus">+</div>
+            <div class="box">CSSOM Tree</div>
+
+            <div class="arrow">→</div>
+            <div class="box final">Render Tree</div>
+        </div>
+
+
+
+
+
+
+
+    </section>
+
+
+
 </body>
 
-<!-- <script src="script.js"></script> -->
+<script src="script.js"></script>
 
 </html>

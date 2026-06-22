@@ -86,9 +86,9 @@ form.addEventListener("submit", (e) => {
     console.log(`.value => ${titleInput.value}`);
     console.log(`.getAttribute => ${titleInput.getAttribute("value")}`);
     /*
-    value property: shows the current live value from the javascript
+    value property: shows the current live value from the javascript.
     
-    getAttribute("value"): shows the original html value attribute
+    getAttribute("value"): shows the original html value attribute, that is null.
     */
 
 
@@ -148,7 +148,6 @@ let deleteTask = (id) => {
 // ==============
 
 themeIcon.addEventListener("click", () => {
-    // const themeIcon = document.querySelector("#theme-icon");
     if (themeIcon.getAttribute("src") === "sun.png") {
         themeIcon.setAttribute("src", "moon.png");
     } else {
@@ -160,33 +159,6 @@ themeIcon.addEventListener("click", () => {
 })
 
 
-
-// Demonstration of createElement(), createTextNode(), append()
-// const card = document.createElement("div");
-// card.classList.add("card");
-
-// const title = document.createElement("h2");
-// const text = document.createTextNode(task.title);
-
-// title.appendChild(text);
-
-// card.append(title);
-
-// taskCards.append(card);
-
-// cards.addEventListener("click", (e) => {
-
-// })
-
-
-// 8 and 9
-// card.removeAttribute("data-status");
-// console.log(
-//     card.hasAttribute("data-status")
-// );
-
-
-
 // Event Delegation
 taskCards.addEventListener("click", (e) => {
     const card = e.target.closest(".card");
@@ -196,7 +168,6 @@ taskCards.addEventListener("click", (e) => {
 
     console.log("You clicked a card:", title.textContent, card.title, card.dataset.id, card.dataset.category, card.dataset.status);
 });
-// }, {capture:true});
 
 
 // ===============
